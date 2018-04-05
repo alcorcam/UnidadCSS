@@ -1,0 +1,338 @@
+*
+{
+	margin:0px;
+	font-family: "Dancing Script", cursive;
+}
+
+body{
+
+		margin: 0px;
+		padding: 0px;
+		background-color: #02010a;
+
+}
+
+header
+{
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+	background-color: #5b7989;
+
+	animation-name: slidein;
+	animation-duration: 1s;
+}
+
+@keyframes slidein
+{
+	0% {
+		margin-top: 150%;
+	}
+	60% {
+		margin-top: -5%;
+	}
+	100% {
+		margin-top: 0%;
+	}
+}
+
+header .contenedor
+{
+	display: flex;
+	display: -webkit-flex;
+}
+
+ header .contenedor #divTitulo
+{
+	width: 60%;
+	padding-top: 15px;
+}
+
+header .contenedor #divTitulo h1
+{
+	color: white;
+	text-shadow: 2px 2px #02010a;
+	font-size: 30px;
+}
+
+header .contenedor #menu
+{
+	width: 40%;
+	/*padding-top: 20px;*/
+}
+
+
+#menu ul
+{
+	float: right;
+	display: flex;
+	display: -webkit-flex;
+	flex-direction: row;
+	margin: 0px;
+	padding-bottom: 10px;
+
+}
+
+#menu ul li
+{
+	list-style: none;
+	padding: 10px;
+}
+
+#menu ul li a
+{
+	text-decoration: none;
+	padding: 10px;
+	color: white;
+	font-size: 20px;
+}
+
+#menu ul .link
+{
+	text-decoration: underline;
+}
+
+.contenedor
+{
+	width: 90%;
+	margin: 0 auto;
+}
+
+img
+{
+	box-shadow: 5px 5px #02010a;
+}
+
+#contenedorCentral
+{
+	background: #82c3a6;
+	text-align: center;
+	padding-bottom: 15px;
+	padding-top: 15px;
+}
+
+#central
+{
+	width: 80%;
+}
+
+#contenedorInferior
+{
+	display: flex;
+	display: -webkit-flex;
+	flex-flow: row;
+	background: #d5c75f;
+	text-align: center;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	border: 1px;
+}
+
+
+.inf
+{
+	padding-top: 25px;
+	padding-bottom: 25px;
+}
+
+#imgIzq
+{
+	width: 50%;
+}
+
+#imgDer
+{
+	width: 50%;
+}
+
+#izquierda
+{
+	text-align: center;
+	width: 80%;
+}
+
+#izquierda:hover
+{
+	transform: rotate(10deg);
+	box-shadow: 5px 5px #82c3a6;
+}
+
+#derecha
+{
+	text-align: center;
+	width: 80%;
+}
+
+#derecha:hover
+{
+	transform: translate(20px, -5px);
+	box-shadow: 5px 5px #82c3a6;
+}
+
+footer
+{
+	background: #c6d5c5;
+	padding: 0px;
+	margin: 0px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+
+}
+
+footer .contenedorFooter
+{
+	display: flex;
+	display: -webkit-flex;
+	flex-direction: row;
+	align-items: stretch;
+	width: 90%;
+	margin: 0px;
+	padding: 3%;
+}
+
+ footer .contenedorFooter div
+{
+	flex-grow: 1;
+}
+
+/* Paisajes*/
+
+#imagenes
+{
+	background: #d5c75f;
+}
+
+.item
+{
+	width: 33.33%;
+	text-align: center;
+}
+
+#contenedorGrid
+{
+	display: flex;
+	display: -webkit-flex;
+	flex-wrap: wrap;
+	width: 100%;
+	margin: 0 auto;
+	padding: 5px;
+}
+
+#contenedorGrid .item img
+{
+	width: 80%;
+}
+
+.item:nth-child(1) img
+{
+	filter: blur(10px);
+}
+
+.item:nth-child(2n) img
+{
+	filter: grayscale(100%);
+}
+
+.item:nth-child(3)
+{
+	filter: sepia(90%);
+}
+
+
+
+
+
+
+/*Para movil*/
+@media screen and (max-width: 900px)
+ {
+	 header .contenedor
+ 			{
+ 				flex-direction: column;
+ 			}
+
+	header .contenedor #divTitulo
+	 		{
+				width: 100%;
+			}
+
+	header .contenedor #menu
+			{
+				width: 100%;
+				padding: 0%;
+				text-align: center;
+			}
+
+	header .contenedor #divTitulo h1
+			{
+				width: 100%;
+				text-align: center;
+				font-size: 20px;
+			}
+
+	header .contenedor #menu ul
+			{
+				float: none;
+				width: 100%;
+				display: flex;
+				display: -webkit-flex;
+				align-items: stretch;
+			}
+
+	header .contenedor #menu ul li:nth-child(1)
+			{
+				flex-grow: 1;
+			}
+
+	header .contenedor #menu ul li:nth-child(2)
+			{
+				flex-grow: 1;
+			}
+
+	header .contenedor #menu ul li:nth-child(3)
+			{
+				flex-grow: 1;
+			}
+
+	header .contenedor #menu
+			{
+				text-align: center;
+			}
+
+	#imagenes #contenedorCentral
+			{
+				width: 100%;
+			}
+
+	section #contenedorInferior
+			{
+				flex-direction: column;
+			}
+
+	section #contenedorInferior article
+			{
+				width: 100%;
+			}
+
+	footer .contenedorFooter
+	   {
+			 flex-direction: column;
+			 font-size: 10px;
+	   }
+
+		 /* Paisajes*/
+	#contenedorGrid
+		{
+			flex-direction: column;
+			width: 90%
+		}
+
+	#contenedorGrid .item
+	{
+		width: 100%;
+	}
+
+	#contenedorGrid .item img
+		{
+			width: 100%;
+		}
+	}
